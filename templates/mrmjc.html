@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='simple-grid.css')}}"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='style.css')}}"
+		/>
+		<link rel="stylesheet" href="static/resources/vendors/slick/slick.css" />
+		<link
+			rel="stylesheet"
+			href="static/resources/vendors/slick/slick-theme.css"
+		/>
+		<link rel="icon" href="static/resources/img/tab-icon.png" />
+		<script src="static/resources/vendors/lottie.js"></script>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+		<title>Karing Frontiers</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="menu-icons">
+					<ion-icon class="menu-icon" name="menu-outline"></ion-icon>
+					<ion-icon class="close-icon" name="close-outline"></ion-icon>
+				</div>
+				<a href="/">
+					<div class="logo-container">
+						<img src="static/resources/img/icon.png" />
+					</div>
+				</a>
+				<ul class="nav-list">
+					<li>
+						<a href="/">Home</a>
+					</li>
+
+					<li>
+						<a class="_current_" href="#/"
+							>Learn more
+							<ion-icon
+								class="dropdown-icon"
+								name="caret-down-outline"
+							></ion-icon
+						></a>
+						<ul class="sub-menu">
+							<li>
+								<a href="../karenpeople"
+									>The Crisis faced by the Karen people</a
+								>
+							</li>
+							<li>
+								<a class="_current_" href="../mrmjc">Mae Ra Moe Junior College</a>
+							</li>
+							<li>
+								<a href="../otherhelp">What else can I do to help?</a>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="../about">About us</a>
+					</li>
+
+					<li>
+						<a href="../contact">Contact us</a>
+					</li>
+
+					<li class="move-right">
+						<a class="nav-button btn" href="/donate">Donate</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="progress-container">
+				<div class="progress-bar" id="myBar"></div>
+			</div>
+		</header>
+
+		<div class="page-header">
+			<div class="page-header-text">
+				<h1>Mae Ra Moe Junior College</h1>
+				<p>"Education is the most powerful weapon to change the world."</p>
+			</div>
+		</div>
+
+		<div class="wrapper show-on-scroll is-visible">
+			<div class="mrmjc-container">
+				<div class="mrmjc-sidebar">
+					<div class="sidebar-header">
+						<h2>Mae Ra Moe Junior College</h2>
+					</div>
+					<img src="static/resources/img/sign.jpg"></img>
+					<p>
+						We have been supporting the Mae Ra Moe Junior College since 2019. We
+						need your support to help us provide an environment of enjoyment,
+						opportunity and growth for 60-75 students each year. As well as
+						employment for the 13 teachers that work there year on year.
+					</p>
+					<div class="sidebar-cta">
+						<a href="static/resources/MRMJC Info.pdf" download
+							><ion-icon name="download-outline"></ion-icon> Download full
+							document on MRMJC</a
+						>
+					</div>
+				</div>
+				<div class="mrmjc-main">
+					<div class="main-container">
+						<h2>Background:</h2>
+						<p>
+							Implementation of the Institute of Higher Education under the
+							Karen Education Department (KED) was initiated in Mar NerPlaw, the
+							Karen National Union Headquarters in 1982. The initial aim of the
+							Institute was to provide high school graduates with an opportunity
+							to further their education in specific fields of studies.
+						</p>
+						<p>
+							The State Peace and Development Council’s (SPDC) and Democratic
+							Karen Buddhist Army’s (DKBA) military activities in Karen State
+							reached its peak in 1995, and as the results, thousands of
+							civilian population moved to the Thai side of the Thailand-Burma
+							border to take temporary refuge in different refugee camps,
+							allowing them to set up their own education system. There are a
+							total of seven Karen refugee camps located in Ratchburi province,
+							Kanchanaburi province, Tak province, and Mae Hongson province
+							respectively.
+						</p>
+						<p>
+							As the number of high school graduates increased, community
+							leaders and educational personnel realized that there was a need
+							to set up post-ten schools or tertiary education programs in order
+							to provide an opportunity for high school graduates to continue
+							their studies in the camps. However, each post-ten school had its
+							own aim and objectives according to the need of the community, and
+							there were very limited cooperation and link between these
+							programs.
+						</p>
+						<p>
+							Therefore, with the intention of recognizing the efforts of these
+							post-ten programs have made, the Institute of Higher Education,
+							currently under the Karen Refugee Committee-Education Entity is
+							initiating an action plan by promoting the existing post-ten
+							programs and encouraging each to take initiative steps, extending
+							their programming according to the needs and requirements of their
+							communities.
+						</p>
+						<p>
+							The Mae Ra Moe Junior College (MRMJC) the Mae Ra Moe Junior
+							College was situated in Mae Ra Moe Karen Refugee Camp in Mae
+							Hongson Province (Thailand).It was formerly known as the
+							Agriculture Studies Programme (ASP) which was established in 1998
+							in Mae Ra Moe refugee camp. At that time, the program’s emphasis
+							was only on the teaching of agriculture and animal husbandry. In
+							the academic year of 2003-2004, when school name was changed to
+							Further Education Course (FEC), another stream of studies called
+							Special Language Course (SLC) under the FEC was added. In 2008,
+							when the school came under the IHE education system, the name was
+							changed to Mae Ra Moe Junior College (MRMJC) and has utilized IHE
+							curriculum and policies since then.
+						</p>
+					</div>
+
+					<div class="main-container no-margin">
+						<h2>Future challenges & objectives:</h2>
+						<p>
+							MRMJC has been supported by Child's Dream Foundation from 2008 to
+							2018.In the coming 2019 Academic year and in the days to come the
+							Child's Dream Foundation is going to stop supporting MRMJC so it
+							is a big problems for MRMJC to continue in the future.
+						</p>
+						<p>Current objectives:</p>
+						<ol class="objectives-list">
+							<li>
+								To prepare leadership for all branches, organisations and
+								departments in our communities.
+							</li>
+							<li>
+								To adequately quality graduates for a position in recommended
+								field area(s) in Karen Communities.
+							</li>
+							<li>
+								To provide broad options in lifework through quality preparation
+								for career in profession, public services and business.
+							</li>
+							<li>To enable students to acquire high levels of knowledge.</li>
+							<li>
+								To promote critical analysis and testing of ideas and
+								creativity.
+							</li>
+							<li>
+								To assist students in developing their capacity to think and to
+								interact with the problems of life, clearness of thought and
+								commitment to their convictions.
+							</li>
+							<li>
+								To support the authority as a means of maintaing order and
+								protection of persons and property.
+							</li>
+							<li>
+								To uphold principles of healthful living not only in courses
+								taught but also in regulation of the school program and
+								management.
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div class="course-table">
+				<h2>MRMJC Curriculum:</h2>
+				<table class="fixtures-table" role="table">
+					<thead role="rowgroup">
+						<tr role="row">
+							<th role="columnheader">Course name:</th>
+							<th role="columnheader">Course description:</th>
+							<th class="course-summary" role="columnheader">
+								Course summary:
+							</th>
+							<th role="columnheader">Course credits:</th>
+						</tr>
+					</thead>
+					<tbody role="rowgroup">
+						<tr role="row">
+							<td role="cell">ENGL 61</td>
+							<td role="cell">Supplementary English</td>
+							<td class="course-summary" role="cell">
+								It is an English course that all the students not passing the
+								IHE English entrance examination must pass before they can take
+								the first year courses numbering 100-199. It is a prerequisite
+								course for all the first year English courses, which means the
+								students not completing this course successfully cannot take any
+								other English courses. This course aims at providing a solid
+								foundation in reading, writing, speaking and understanding
+								spoken English.
+							</td>
+							<td role="cell">5</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">ENGL 131; 132</td>
+							<td role="cell">General English</td>
+							<td class="course-summary" role="cell">
+								These two are English courses that help the students to learn
+								English grammar which includes parts of speech and
+								classifications of words. They also aim to improve reading
+								sentence structures and text literacy. Since they are separated
+								by a semicolon, ENGL 131 is prerequisite to ENGL 132 which means
+								the students cannot take ENGL 132 unless they finish ENGL 131.
+							</td>
+							<td role="cell">5</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">ENGL 151; 152</td>
+							<td role="cell">English Reading and Writing</td>
+							<td class="course-summary" role="cell">
+								These are English courses that are designed to meet the
+								students’ need for increased comprehension and fluency (speed)
+								in reading texts and with content-based writing. They are
+								separated by a semicolon. So ENGL 151 is a prerequisite to ENGL
+								152.
+							</td>
+							<td role="cell">5</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">ENGL 231; 232</td>
+							<td role="cell">General English</td>
+							<td class="course-summary" role="cell">
+								These are English courses which help the students to learn
+								English grammar at a more advanced level with an emphasis on
+								knowledge and correct usage of the grammar and language
+								structure. They also develop reading skills including the
+								practicing of reading complex, technical passages. They are
+								English courses for the second year students who finished ENGL
+								131;132 and other 100-199 English courses. They can be taken
+								either in the first or second semester.
+							</td>
+							<td role="cell">4</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">ENGL 251;252</td>
+							<td role="cell">English Reading and Writing</td>
+							<td class="course-summary" role="cell">
+								They are English courses which are designed to develop critical
+								and analytical abilities through reading and evaluating text.
+								Students will learn to identify and apply various types of
+								reading strategies that deepen comprehension. They also will
+								cover writing skills, including a variety of academic
+								assignments requiring specific formats, experimentation,
+								flexibility and creativity. They are English courses for the
+								second year students who finished ENGL 151;152 and other 100-199
+								English courses.
+							</td>
+							<td role="cell">3</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">ENGL 256</td>
+							<td role="cell">Research Writing</td>
+							<td class="course-summary" role="cell">
+								It is an English course that is designed to help the students
+								write term papers, class projects and other necessary research
+								skills for the students to do independently under the guidance
+								of the teachers. Since it is a 200 course it has to be taken in
+								the second year during first or second semester.
+							</td>
+							<td role="cell">2</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">SOCS 131; 132</td>
+							<td role="cell">Social Studies</td>
+							<td class="course-summary" role="cell">
+								These are courses that introduce students to the field of Social
+								Studies, dealing with South East Asia Studies and the related
+								fields. They are separated by a comma for the first year
+								students. Either of these courses can be taken independently
+								during the first or second semester and credit is given
+								accordingly.
+							</td>
+							<td role="cell">3</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">SOCS 231; 232</td>
+							<td role="cell">Social Studies</td>
+							<td class="course-summary" role="cell">
+								These are the study of social systems, including democracy,
+								economics, particularly linked to the History of Burma. Students
+								must finish SOCS 131,132 before they can take SOCS 233,234.
+							</td>
+							<td role="cell">3</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">MATH 61</td>
+							<td role="cell">Supplementary Mathematics</td>
+							<td class="course-summary" role="cell">
+								It is a Math course that all the students not passing the IHE
+								Math entrance examination must take before they can take Math
+								courses numbering 100-199. It is a prerequisite course for all
+								the first year Math courses, which means the students taking
+								this course cannot take any other Math courses. This course will
+								help the students to learn more about basic Math.
+							</td>
+							<td role="cell">5</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">MATH 131; 132</td>
+							<td role="cell">Mathematics</td>
+							<td class="course-summary" role="cell">
+								These are the study of properties of integers, divisibility and
+								the theory and functions of numbers. They also include a study
+								of statistics including distributions, sampling and analysis of
+								variance. Since they are separated by a semicolon MATH 131 is
+								prerequisite to MATH 132 which means the students cannot take
+								MATH 132 unless they finish MATH 131.
+							</td>
+							<td role="cell">2</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">MATH 231; 232</td>
+							<td role="cell">Mathematics</td>
+							<td class="course-summary" role="cell">
+								These courses give emphasis to Algebra including a study of
+								matrices, determinants, linear equations, and dimension. They
+								also include Calculus, including functions of several variables,
+								such as: continuity, differentiation, integration, uniform
+								convergence. They are Math courses for the second year students
+								who finished MATH 131;132 and other 100-199 Math courses. They
+								can be taken either in the first or second semester and credit
+								is applied accordingly.
+							</td>
+							<td role="cell">3</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">SCIE 151; 152</td>
+							<td role="cell">General Science</td>
+							<td class="course-summary" role="cell">
+								They are courses that will introduce students to Science. They
+								include Biology such as cellular structures of living things,
+								chemistry of cells and plant structures and functions. It is
+								also a principle of physics including of measurement of
+								quantity, force and motion. Since they are separated by a
+								semicolon SCIE 151 is prerequisite to SCIE 152 which means the
+								students cannot take SCIE 152 unless they finish SCIE 151.
+							</td>
+							<td role="cell">2</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">SCIE 251; 252</td>
+							<td role="cell">General Science</td>
+							<td class="course-summary" role="cell">
+								These courses help students to learn Chemistry principles
+								including the periodic table and chemical bonding. They also
+								include concepts in physics such as: work, power, machines,
+								sound. They are Science courses for the second year students who
+								finished SCIE 151;152 and other 100199 Science courses. They can
+								be taken either in the first or second semester and credit is
+								applied accordingly.
+							</td>
+							<td role="cell">3</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">OREN 151</td>
+							<td role="cell">Orientation</td>
+							<td class="course-summary" role="cell">
+								It is the program orientation which will help students learn
+								what courses to choose during each semester and other college
+								policies related to IHE and its educational system in the camps
+								located along the Thai-Burma border. This course can be taken
+								either in the first or second semester during the first or
+								second year.
+							</td>
+							<td role="cell">1</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">KARN 111; 112</td>
+							<td role="cell">Basic Karen</td>
+							<td class="course-summary" role="cell">
+								These are Karen Language courses that study the basics of the
+								Karen language. They include the Karen sound system,
+								pronunciation, and everyday conversation focusing on basic
+								vocabulary. Since they are separated by a semicolon, KARN 111 is
+								prerequisite to KARN 112 which means the students cannot take
+								KARN 112 unless they finish KARN 111.
+							</td>
+							<td role="cell">3</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">KARN 151; 152</td>
+							<td role="cell">Advance Karen</td>
+							<td class="course-summary" role="cell">
+								These are Karen language courses that help the students to have
+								further fluency of the language, involving intensive practical
+								exercises, grammar, vocabulary, oral expression and reading
+								strategies. They also integrate Karen culture. They are
+								separated by a comma for the first year students. Either of
+								these courses can be taken independently during the first or
+								second semester and credit is given accordingly.
+							</td>
+							<td role="cell">3</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">BURM 231</td>
+							<td role="cell">Burmese</td>
+							<td class="course-summary" role="cell">
+								It is a language course that helps the students to learn the
+								basics of the Burmese language. It also introduces Burmese
+								script, getting students familiar with the characters and the
+								important grammatical forms. This course has to be taken in the
+								second year during first or second semester.
+							</td>
+							<td role="cell">3</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">THAI 231</td>
+							<td role="cell">Thai</td>
+							<td class="course-summary" role="cell">
+								It is a language course which will help the students to learn
+								the basic usage of the Thai language. It introduces Thai script,
+								getting students familiar with the characters. This course has
+								to be taken in the second year during first or second semester.
+							</td>
+							<td role="cell">3</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">COMP 151</td>
+							<td role="cell">Computing</td>
+							<td class="course-summary" role="cell">
+								It is a computing course introducing typing tutorials that will
+								train students to learn to type and other computer programs
+								needed for term papers, projects and other necessary class
+								works.
+							</td>
+							<td role="cell">1</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">EDUC 151</td>
+							<td role="cell">Philosophy Education</td>
+							<td class="course-summary" role="cell">
+								This course introduces students to the world of philosophy, and
+								related contributions to education and learning. It covers the
+								background of global educational thinkers and how our school
+								systems has changed from ancient era to current times. It must
+								be taken in the first year during the first or second semester.
+							</td>
+							<td role="cell">3</td>
+						</tr>
+						<tr role="row">
+							<td role="cell">PHED 151</td>
+							<td role="cell">Physical Education</td>
+							<td class="course-summary" role="cell">
+								This course is centered around the physical activity needs,
+								abilities and interests of students. The goals are to create
+								unity among students and to improve physical fitness. This
+								course can be taken in the first year either in the first or
+								second semester.
+							</td>
+							<td role="cell">1</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="main-container courses-mobile">
+					<div class="course">
+						<h2>ENGL 61</h2>
+						<p>
+							It is an English course that all the students not passing the IHE
+							English entrance examination must pass before they can take the
+							first year courses numbering 100-199. It is a prerequisite course
+							for all the first year English courses, which means the students
+							not completing this course successfully cannot take any other
+							English courses. This course aims at providing a solid foundation
+							in reading, writing, speaking and understanding spoken English.
+						</p>
+					</div>
+					<div class="course">
+						<h2>ENGL 131;132</h2>
+						<p>
+							These two are English courses that help the students to learn
+							English grammar which includes parts of speech and classifications
+							of words. They also aim to improve reading sentence structures and
+							text literacy. Since they are separated by a semicolon, ENGL 131
+							is prerequisite to ENGL 132 which means the students cannot take
+							ENGL 132 unless they finish ENGL 131.
+						</p>
+					</div>
+					<div class="course">
+						<h2>ENGL 151;152</h2>
+						<p>
+							These are English courses that are designed to meet the students’
+							need for increased comprehension and fluency (speed) in reading
+							texts and with content-based writing. They are separated by a
+							semicolon. So ENGL 151 is a prerequisite to ENGL 152.
+						</p>
+					</div>
+					<div class="course">
+						<h2>ENGL 231;232</h2>
+						<p>
+							These are English courses which help the students to learn English
+							grammar at a more advanced level with an emphasis on knowledge and
+							correct usage of the grammar and language structure. They also
+							develop reading skills including the practicing of reading
+							complex, technical passages. They are English courses for the
+							second year students who finished ENGL 131;132 and other 100-199
+							English courses. They can be taken either in the first or second
+							semester.
+						</p>
+					</div>
+					<div class="course">
+						<h2>ENGL 251;252</h2>
+						<p>
+							They are English courses which are designed to develop critical
+							and analytical abilities through reading and evaluating text.
+							Students will learn to identify and apply various types of reading
+							strategies that deepen comprehension. They also will cover writing
+							skills, including a variety of academic assignments requiring
+							specific formats, experimentation, flexibility and creativity.
+							They are English courses for the second year students who finished
+							ENGL 151;152 and other 100-199 English courses.
+						</p>
+					</div>
+					<div class="course">
+						<h2>ENGL 256</h2>
+						<p>
+							It is an English course that is designed to help the students
+							write term papers, class projects and other necessary research
+							skills for the students to do independently under the guidance of
+							the teachers. Since it is a 200 course it has to be taken in the
+							second year during first or second semester.
+						</p>
+					</div>
+					<div class="course">
+						<h2>SOCS 131, 132</h2>
+						<p>
+							These are courses that introduce students to the field of Social
+							Studies, dealing with South East Asia Studies and the related
+							fields. They are separated by a comma for the first year students.
+							Either of these courses can be taken independently during the
+							first or second semester and credit is given accordingly.
+						</p>
+					</div>
+					<div class="course">
+						<h2>SOCS 231,232</h2>
+						<p>
+							These are the study of social systems, including democracy,
+							economics, particularly linked to the History of Burma. Students
+							must finish SOCS 131,132 before they can take SOCS 233,234.
+						</p>
+					</div>
+					<div class="course">
+						<h2>MATH 61</h2>
+						<p>
+							It is a Math course that all the students not passing the IHE Math
+							entrance examination must take before they can take Math courses
+							numbering 100-199. It is a prerequisite course for all the first
+							year Math courses, which means the students taking this course
+							cannot take any other Math courses. This course will help the
+							students to learn more about basic Math.
+						</p>
+					</div>
+					<div class="course">
+						<h2>MATH 131;132</h2>
+						<p>
+							These are the study of properties of integers, divisibility and
+							the theory and functions of numbers. They also include a study of
+							statistics including distributions, sampling and analysis of
+							variance. Since they are separated by a semicolon MATH 131 is
+							prerequisite to MATH 132 which means the students cannot take MATH
+							132 unless they finish MATH 131.
+						</p>
+					</div>
+					<div class="course">
+						<h2>MATH 231;232</h2>
+						<p>
+							These courses give emphasis to Algebra including a study of
+							matrices, determinants, linear equations, and dimension. They also
+							include Calculus, including functions of several variables, such
+							as: continuity, differentiation, integration, uniform convergence.
+							They are Math courses for the second year students who finished
+							MATH 131;132 and other 100-199 Math courses. They can be taken
+							either in the first or second semester and credit is applied
+							accordingly.
+						</p>
+					</div>
+					<div class="course">
+						<h2>SCIE 151; 152</h2>
+						<p>
+							They are courses that will introduce students to Science. They
+							include Biology such as cellular structures of living things,
+							chemistry of cells and plant structures and functions. It is also
+							a principle of physics including of measurement of quantity, force
+							and motion. Since they are separated by a semicolon SCIE 151 is
+							prerequisite to SCIE 152 which means the students cannot take SCIE
+							152 unless they finish SCIE 151.
+						</p>
+					</div>
+					<div class="course">
+						<h2>SCIE 251; 252</h2>
+						<p>
+							These courses help students to learn Chemistry principles
+							including the periodic table and chemical bonding. They also
+							include concepts in physics such as: work, power, machines, sound.
+							They are Science courses for the second year students who finished
+							SCIE 151;152 and other 100199 Science courses. They can be taken
+							either in the first or second semester and credit is applied
+							accordingly.
+						</p>
+					</div>
+					<div class="course">
+						<h2>OREN 151</h2>
+						<p>
+							It is the program orientation which will help students learn what
+							courses to choose during each semester and other college policies
+							related to IHE and its educational system in the camps located
+							along the Thai-Burma border. This course can be taken either in
+							the first or second semester during the first or second year.
+						</p>
+					</div>
+					<div class="course">
+						<h2>KARN 111;112</h2>
+						<p>
+							These are Karen Language courses that study the basics of the
+							Karen language. They include the Karen sound system,
+							pronunciation, and everyday conversation focusing on basic
+							vocabulary. Since they are separated by a semicolon, KARN 111 is
+							prerequisite to KARN 112 which means the students cannot take KARN
+							112 unless they finish KARN 111.
+						</p>
+					</div>
+					<div class="course">
+						<h2>KARN 151, 152</h2>
+						<p>
+							These are Karen language courses that help the students to have
+							further fluency of the language, involving intensive practical
+							exercises, grammar, vocabulary, oral expression and reading
+							strategies. They also integrate Karen culture. They are separated
+							by a comma for the first year students. Either of these courses
+							can be taken independently during the first or second semester and
+							credit is given accordingly.
+						</p>
+					</div>
+					<div class="course">
+						<h2>BURM 231</h2>
+						<p>
+							It is a language course that helps the students to learn the
+							basics of the Burmese language. It also introduces Burmese script,
+							getting students familiar with the characters and the important
+							grammatical forms. This course has to be taken in the second year
+							during first or second semester.
+						</p>
+					</div>
+					<div class="course">
+						<h2>THAI 231</h2>
+						<p>
+							It is a language course which will help the students to learn the
+							basic usage of the Thai language. It introduces Thai script,
+							getting students familiar with the characters. This course has to
+							be taken in the second year during first or second semester.
+						</p>
+					</div>
+					<div class="course">
+						<h2>COMP 151</h2>
+						<p>
+							It is a computer course introducing typing tutorials will train
+							students to learn keyboarding and other computer programs needed
+							for term papers, projects and other necessary class works.
+						</p>
+					</div>
+					<div class="course">
+						<h2>EDUC 151</h2>
+						<p>
+							This course introduces students to the world of philosophy, and
+							related contributions to education and learning. It covers the
+							background of global educational thinkers and how our school
+							systems has changed from ancient era to current times. It must be
+							taken in the first year during the first or second semester.
+						</p>
+					</div>
+					<div class="course">
+						<h2>PHED 151</h2>
+						<p>
+							This course is centered around the physical activity needs,
+							abilities and interests of students. The goals are to create unity
+							among students and to improve physical fitness. This course can be
+							taken in the first year either in the first or second semester.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="footer-container">
+				<div class="footer-wrapper">
+					<div class="footer-inner">
+						<div class="footer-1">
+							<img src="static/resources/img/logo-white.svg" />
+							<p>
+								Karing Frontiers is a registered charity in Hong Kong
+								0061237. 
+							</p>
+							<p><a class="mail-footer" target="_blank"  href="mailto:contact@karingfrontiers.com?Subject=Enquiry"><ion-icon name="mail-outline"></ion-icon> contact@karingfrontiers.com</a></p>
+						</div>
+						<div class="footer-2">
+							<div class="footer-cta">
+								<a class="footer-cta btn" href="#">Make a donation today</a>
+							</div>
+						</div>
+						<div class="footer-3">
+							<div class="connect-with-us">
+								<h2>Connect with us</h2>
+								<p>
+									Please feel free to get in touch with us through our various
+									social media channels.
+								</p>
+							</div>
+							<div class="footer-social-links">
+								<a href="#"
+									><ion-icon class="instagram" name="logo-instagram"></ion-icon
+								></a>
+								<a href="#"
+									><ion-icon class="facebook" name="logo-facebook"></ion-icon
+								></a>
+								<a href="#"
+									><ion-icon class="linkedin" name="logo-linkedin"></ion-icon
+								></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer-wrapper">
+					<p>
+						Site created for free with <ion-icon name="heart"></ion-icon> by
+						Jude Cornish &copy
+						<script>
+							document.write(new Date().getFullYear());
+						</script>
+						-
+						<a href="https://judecornish.co.uk/" target="_blank"
+							>judecornish.co.uk</a
+						>
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://unpkg.com/ionicons@5.1.0/dist/ionicons.js"></script>
+		<script
+			type="text/javascript"
+			src="static/resources/vendors/slick/slick.min.js"
+		></script>
+		<script src="static/app.js"></script>
+	</body>
+</html>

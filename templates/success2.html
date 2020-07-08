@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='simple-grid.css')}}"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='style.css')}}"
+		/>
+		<link rel="stylesheet" href="static/resources/vendors/slick/slick.css" />
+		<link
+			rel="stylesheet"
+			href="static/resources/vendors/slick/slick-theme.css"
+		/>
+		<link rel="icon" href="static/resources/img/tab-icon.png" />
+		<script src="static/resources/vendors/lottie.js"></script>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+		<title>Karing Frontiers</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="menu-icons">
+					<ion-icon class="menu-icon" name="menu-outline"></ion-icon>
+					<ion-icon class="close-icon" name="close-outline"></ion-icon>
+				</div>
+				<a href="/">
+					<div class="logo-container">
+						<img src="static/resources/img/icon.png" />
+					</div>
+				</a>
+				<ul class="nav-list">
+					<li>
+						<a href="#/">Home</a>
+					</li>
+
+					<li>
+						<a href="#"
+							>Learn more
+							<ion-icon
+								class="dropdown-icon"
+								name="caret-down-outline"
+							></ion-icon
+						></a>
+						<ul class="sub-menu">
+							<li>
+								<a href="../karenpeople"
+									>The Crisis faced by the Karen people</a
+								>
+							</li>
+							<li>
+								<a href="../mrmjc">Mae Ra Moe Junior College</a>
+							</li>
+							<li>
+								<a href="../otherhelp">What else can I do to help?</a>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="../about">About us</a>
+					</li>
+
+					<li>
+						<a href="../contact">Contact us</a>
+					</li>
+
+					<li class="move-right">
+						<a class="nav-button btn" href="/donate">Donate</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="page-header">
+			<div class="page-header-text">
+				<h1>Thank you so much!</h1>
+			</div>
+		</div>
+		<div class="wrapper show-on-scroll is-visible">
+			<div class="success-header">
+				<div class="success-header-left">
+				<h2>You're the best!</h2>
+				<p>
+					We really appreciate you setting up a recurring donation.
+				</p>
+				<p>
+					You should receive an email confirming your donation soon.
+				</p>
+				<p>If you would like to complete a one-time donation, please click below!</p>
+				<p><a href="/donate">Complete a one-time donation</a></p>
+				<p>Made a mistake? That's okay! We can refund the amount to you and cancel any initialised recurring donations. Please send us an email by clicking the link below.</p>
+				<p><a href="mailto:contact@karingfrontiers.com?Subject=Enquiry">contact@karingfrontiers.com</a></p>
+				</div>
+				<div class="success-header-right">
+					<div class="success-header-img">
+						<img src="../static/resources/img/pic-of-students-heart.png">
+					</div>
+				</div>
+			</div>
+		</div>
+				<footer>
+			<div class="footer-container">
+				<div class="footer-wrapper">
+					<div class="footer-inner">
+						<div class="footer-1">
+							<img src="static/resources/img/logo-white.svg" />
+							<p>
+								Karing Frontiers is a registered charity in Hong Kong
+								0061237. 
+							</p>
+							<p><a class="mail-footer" target="_blank"  href="mailto:contact@karingfrontiers.com?Subject=Enquiry"><ion-icon name="mail-outline"></ion-icon> contact@karingfrontiers.com</a></p>
+						</div>
+						<div class="footer-2">
+							<div class="footer-cta">
+								<a class="footer-cta btn" href="#">Make a donation today</a>
+							</div>
+							<!-- Badge Code - Do Not Change The Code --><div class="col-xs-12 mt20" id="bg"><div style="margin:0px auto;width:100px;text-align:left;display:flex;border-radius:5px"><p>Visits:</p><a href="http://visitorshitcounter.com" rel="nofollow noopener"  target="_blank" title="https://visitorshitcounter.com/"></a></span><span class="text" id="dupli_hit_counter"   style="margin: 2px 0px 0px 0px;padding:0px 0 0px 0;display:inline-block;color:rgb(255, 255, 255);width:100%;text-align:center;"></span></span><input type="hidden" id="site_val"   value="https://visitorshitcounter.com/counterDisplay?code=700046db82d45ba186a121312a42bf69&style=0017&pad=5&type=page&initCount=1"></div></div><script src="https://visitorshitcounter.com/js/badgess.js?v=1592058023"></script><!-- Badge Code End Here -->
+						</div>
+						<div class="footer-3">
+							<div class="connect-with-us">
+								<h2>Connect with us</h2>
+								<p>
+									Please feel free to get in touch with us through our various
+									social media channels.
+								</p>
+							</div>
+							<div class="footer-social-links">
+								<a href="#"
+									><ion-icon class="instagram" name="logo-instagram"></ion-icon
+								></a>
+								<a href="#"
+									><ion-icon class="facebook" name="logo-facebook"></ion-icon
+								></a>
+								<a href="#"
+									><ion-icon class="linkedin" name="logo-linkedin"></ion-icon
+								></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer-wrapper">
+					<p>
+						Site created for free with <ion-icon name="heart"></ion-icon> by
+						Jude Cornish &copy
+						<script>
+							document.write(new Date().getFullYear());
+						</script>
+						-
+						<a href="https://judecornish.co.uk/" target="_blank"
+							>judecornish.co.uk</a
+						>
+					</p>
+				</div>
+			</div>
+		</footer>
+		<script src="https://unpkg.com/ionicons@5.1.0/dist/ionicons.js"></script>
+		<script
+			type="text/javascript"
+			src="static/resources/vendors/slick/slick.min.js"
+		></script>
+		<script src="static/app.js"></script>
+		<script charset="utf-8">
+			// 1. Extract params from querystring
+			var params = new URLSearchParams(window.location.search);
+			var sessionId = params.get("id");
+			var unit_amount = document.getElementById("amount2");
+			var formatter = new Intl.NumberFormat("en-US", {
+				style: "currency",
+				currency: "USD",
+				minimumFractionDigits: 2,
+			});
+
+			// 2. Fetch Session
+			fetch("/retrieve-session?id=" + sessionId)
+				.then((response) => response.json())
+				.then((session) => {
+					// 3. Update page with details of donation
+					amount2.innerText = formatter.format(
+						session.line_items.unit_amount / 100
+					);
+				})
+				.catch((error) => {
+					console.error("Error:", error);
+				});
+		</script>
+	</body>
+</html>

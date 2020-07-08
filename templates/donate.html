@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='style.css')}}"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='donate2.css')}}"
+		/>
+		<link rel="stylesheet" type="text/css" href="static/style.css" />
+
+
+		<link rel="stylesheet" href="static/resources/vendors/slick/slick.css" />
+		<link
+			rel="stylesheet"
+			href="static/resources/vendors/slick/slick-theme.css"
+		/>
+		<link rel="icon" href="static/resources/img/tab-icon.png" />
+		<script src="static/resources/vendors/lottie.js"></script>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+		<script src="https://unpkg.com/ionicons@5.1.0/dist/ionicons.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+		<title>Karing Frontiers</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="menu-icons">
+					<ion-icon class="menu-icon" name="menu-outline"></ion-icon>
+					<ion-icon class="close-icon" name="close-outline"></ion-icon>
+				</div>
+				<a href="/">
+					<div class="logo-container">
+						<img src="static/resources/img/icon.png" />
+					</div>
+				</a>
+				<ul class="nav-list">
+					<li>
+						<a href="/">Home</a>
+					</li>
+
+					<li>
+						<a href="#/"
+							>Learn more
+							<ion-icon
+								class="dropdown-icon"
+								name="caret-down-outline"
+							></ion-icon
+						></a>
+						<ul class="sub-menu">
+							<li>
+								<a href="../karenpeople"
+									>The Crisis faced by the Karen people</a
+								>
+							</li>
+							<li>
+								<a href="../mrmjc">Mae Ra Moe Junior College</a>
+							</li>
+							<li>
+								<a href="../otherhelp">What else can I do to help?</a>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="../about">About us</a>
+					</li>
+
+					<li>
+						<a href="../contact">Contact us</a>
+					</li>
+
+					<li class="move-right">
+						<a class="nav-button btn" href="/donate">Donate</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="page-header">
+			<div class="page-header-text">
+				<h1>Support our cause today</h1>
+				<p>All donations are welcome. We really appreciate any help towards our goal of $10,966.</p>
+			</div>
+		</div>
+
+		<div class="wrapper show-on-scroll is-visible">
+			<div id="main">
+				<div id="checkout">
+					<div id="payment-form">
+						<div class="payment-form-row">
+							<div class="donate-icon">
+								<div id="growth-img1"></div>
+							</div>
+							<div class="donate-info">
+								<h2>One-time donation</h2>
+								<p>Send a one-time donation to Karing Frontiers. Your funding will support the Mae Ra Moe Junior College.</p><p>The minimum transaction is currently $1 USD.</p>
+							</div>
+						</div>
+							<fieldset>
+								<label>
+									<input
+										type="number"
+										class="field"
+										id="amount-input1"
+										placeholder="Enter amount in USD"
+										min="1"
+									/>
+								</label>
+							</fieldset>
+							<button id="donate-button1">
+								Make one-time donation</strong>
+							</button>
+				</div>
+			</div>
+				<div id="checkout">
+					<div id="payment-form">
+						<div class="payment-form-row">
+							<div class="donate-icon">
+								<div id="growth-img2"></div>
+							</div>
+							<div class="donate-info">
+								<h2>Recurring donation</h2>
+								<p>Set up a <strong>monthly</strong> donation to Karing Frontiers. Your funding will support the Mae Ra Moe Junior College.</p><p>The minimum transaction is currently $1 USD.</p>
+							</div>
+						</div>
+							<fieldset>
+								<label>
+									<input
+										type="number"
+										class="field"
+										id="amount-input2"
+										min="1"
+										placeholder="Enter amount in USD"
+									/>
+								</label>
+							</fieldset>
+							<button id="donate-button2">
+								Initialise recurring donation</strong>
+							</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper show-on-scroll is-visible">
+			<div class="faq-h2">
+				<h2>Frequently Asked Questions</h2>
+			</div>
+			<section id="faq">
+				<!-- https://css-tricks.com/the-checkbox-hack/ USE THIS TO AVOID PAGE JUMPING LATER-->
+				<div class="faq-left">
+				<div class="accordion-container">
+					<div class="accordion">
+						<div class="accordion-item" id="question1">
+							<a class="accordion-link" href="#question1">
+								Is the donation process safe?
+								<ion-icon class="icon add-icon" name="add-outline"></ion-icon>
+								<ion-icon class="icon close-icon" name="close-outline"></ion-icon>
+							</a>
+							<div class="answer">
+								<p>All donations are handled with Stripe! A large proportion of payments made over the internet are made possible by Stripe. With our implementation, your card details and sensitive information never touch our server. They are handled and processed securely with world-class encryption by Stripe. You can rest assured you're in safe hands. All payments are also refundable, just send us an email!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-container">
+					<div class="accordion">
+						<div class="accordion-item" id="question2">
+							<a class="accordion-link" href="#question2">
+								What percentage of my donation will be received by MRMJC?
+								<ion-icon class="icon add-icon" name="add-outline"></ion-icon>
+								<ion-icon class="icon close-icon" name="close-outline"></ion-icon>
+							</a>
+							<div class="answer">
+								<p>Stripe charge a 2.2% fee + 30 cents. Unfortunately, we cannot control this. Every cent outside of this fee will go directly to the cause. I [Jude Cornish] am paying for the hosting and domain of this site out of my own pocket and all other aspects are covered by the founders.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-container">
+					<div class="accordion">
+						<div class="accordion-item" id="question3">
+							<a class="accordion-link" href="#question3">
+								Can I refund a donation?
+								<ion-icon class="icon add-icon" name="add-outline"></ion-icon>
+								<ion-icon class="icon close-icon" name="close-outline"></ion-icon>
+							</a>
+							<div class="answer">
+								<p>All donations can be refunded. Just send us an email! You can also refund donations made on a recurring basis, as well as the subscription itself.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-container">
+					<div class="accordion">
+						<div class="accordion-item" id="question4">
+							<a class="accordion-link" href="#question4">
+								Can I cancel a recurring donation?
+								<ion-icon class="icon add-icon" name="add-outline"></ion-icon>
+								<ion-icon class="icon close-icon" name="close-outline"></ion-icon>
+							</a>
+							<div class="answer">
+								<p>Of course! We understand situations may change. Just send us an email and we can refund you for any amount up to when the subscription was started. As well as cancel the recurring payment altogether.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-container">
+					<div class="accordion">
+						<div class="accordion-item" id="question5">
+							<a class="accordion-link" href="#question5">
+								Can I donate in a different currency?
+								<ion-icon class="icon add-icon" name="add-outline"></ion-icon>
+								<ion-icon class="icon close-icon" name="close-outline"></ion-icon>
+							</a>
+							<div class="answer">
+								<p>You can donate in any currency but the amount that you enter should be in USD. We are looking to incorporate an option for different currency inputs soon. Apologies for any inconvinience caused, you can use the handy currency converter below if needed! Please note, the currency conversion rate you find may differ from the one charged by Stripe, but this difference should be negligible in almost all cases.</p>
+								<p><a href="https://www.xe.com/currencyconverter/" target="_blank">Currency Converting Tool</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="faq-right">
+					<div class="faq-img-container">
+						<img src="../static/resources/img/pic-of-class2.png">
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<footer>
+			<div class="footer-container">
+				<div class="footer-wrapper">
+					<div class="footer-inner">
+						<div class="footer-1">
+							<img src="static/resources/img/logo-white.svg" />
+							<p>
+								Karing Frontiers is a registered charity in Hong Kong
+								0061237. 
+							</p>
+							<p><a class="mail-footer" target="_blank" href="mailto:contact@karingfrontiers.com?Subject=Enquiry"><ion-icon name="mail-outline"></ion-icon> contact@karingfrontiers.com</a></p>
+						</div>
+						<div class="footer-2">
+							<div class="footer-cta">
+								<a class="footer-cta btn" href="#">Make a donation today</a>
+							</div>
+						</div>
+						<div class="footer-3">
+							<div class="connect-with-us">
+								<h2>Connect with us</h2>
+								<p>
+									Please feel free to get in touch with us through our various
+									social media channels.
+								</p>
+							</div>
+							<div class="footer-social-links">
+								<a href="#"
+									><ion-icon class="instagram" name="logo-instagram"></ion-icon
+								></a>
+								<a href="#"
+									><ion-icon class="facebook" name="logo-facebook"></ion-icon
+								></a>
+								<a href="#"
+									><ion-icon class="linkedin" name="logo-linkedin"></ion-icon
+								></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer-wrapper">
+					<p>
+						Site created for free with <ion-icon name="heart"></ion-icon> by
+						Jude Cornish &copy
+						<script>
+							document.write(new Date().getFullYear());
+						</script>
+						-
+						<a href="https://judecornish.co.uk/" target="_blank"
+							>judecornish.co.uk</a
+						>
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://unpkg.com/ionicons@5.1.0/dist/ionicons.js"></script>
+		<script
+			type="text/javascript"
+			src="static/resources/vendors/slick/slick.min.js"
+		></script>
+		<script src="static/app.js"></script>
+		<script src="https://js.stripe.com/v3/"></script>
+		<script charset="utf-8">
+			var stripe = Stripe("pk_test_51H2crYDpVPeoUNiSwuaC0aHQtAguWGIVCXGrKXVu6hJRJu7i1o39N2KcmLtnmdkykr5XvIcbVNRklbIsKA7H75X8009t7Jakxe");
+			var amount1 = document.getElementById("amount-input1");
+			var button1 = document.getElementById("donate-button1");
+			button1.addEventListener("click", function (e) {
+				e.preventDefault();
+				createSessionAndRedirect1();
+			});
+
+			function createSessionAndRedirect1() {
+				fetch("/create-session1", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						amount1: amount1.value * 100,
+					}),
+				})
+					.then((response) => response.json())
+					.then((session) => {
+						// 2. Redirect to checkout
+						stripe.redirectToCheckout({ sessionId: session.id });
+					})
+
+					.catch((error) => {
+						console.error("Error:", error);
+					});
+			}
+			// SUBSCRIPTIOSN
+
+            var amount2 = document.getElementById("amount-input2");
+			var button2 = document.getElementById("donate-button2");
+			button2.addEventListener("click", function (e) {
+				e.preventDefault();
+				createSessionAndRedirect2();
+			});
+
+			function createSessionAndRedirect2() {
+				fetch("/create-session2", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						amount2: amount2.value * 100,
+					}),
+				})
+					.then((response) => response.json())
+					.then((session) => {
+						// 2. Redirect to checkout
+						stripe.redirectToCheckout({ sessionId: session.id });
+					})
+
+					.catch((error) => {
+						console.error("Error:", error);
+					});
+			}
+		</script>
+				<script>
+			var animation1 = bodymovin.loadAnimation({
+				container: document.getElementById("growth-img1"), // Required
+				path: "../static/resources/img/growth.json", // Required
+				renderer: "svg", // Required
+				loop: false, // Optional
+				autoplay: true, // Optional
+				name: "Hello World", // Name for future reference. Optional.
+			});
+
+			animation1.playSegments([[0,13],[0,14]], true);
+
+			var animation = bodymovin.loadAnimation({
+				container: document.getElementById("growth-img2"), // Required
+				path: "../static/resources/img/growth.json", // Required
+				renderer: "svg", // Required
+				loop: true, // Optional
+				autoplay: true, // Optional
+				name: "Hello World", // Name for future reference. Optional.
+			});
+
+			LottieInteractivity.create({
+				mode:"scroll",
+				player: "#growth-img1",
+
+			});
+		</script>
+
+	</body>
+</html>

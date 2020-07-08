@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='simple-grid.css')}}"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='style.css')}}"
+		/>
+		<link rel="stylesheet" href="static/resources/vendors/slick/slick.css" />
+		<link
+			rel="stylesheet"
+			href="static/resources/vendors/slick/slick-theme.css"
+		/>
+		<link rel="icon" href="static/resources/img/tab-icon.png" />
+		<script src="static/resources/vendors/lottie.js"></script>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+		<title>Karing Frontiers</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="menu-icons">
+					<ion-icon class="menu-icon" name="menu-outline"></ion-icon>
+					<ion-icon class="close-icon" name="close-outline"></ion-icon>
+				</div>
+				<a href="/">
+					<div class="logo-container">
+						<img src="static/resources/img/icon.png" />
+					</div>
+				</a>
+				<ul class="nav-list">
+					<li>
+						<a href="/">Home</a>
+					</li>
+
+					<li>
+						<a class="_current_" href="#/"
+							>Learn more
+							<ion-icon
+								class="dropdown-icon"
+								name="caret-down-outline"
+							></ion-icon
+						></a>
+						<ul class="sub-menu">
+							<li>
+								<a class="_current_" href="../karenpeople"
+									>The Crisis faced by the Karen people</a
+								>
+							</li>
+							<li>
+								<a href="../mrmjc">Mae Ra Moe Junior College</a>
+							</li>
+							<li>
+								<a href="../otherhelp">What else can I do to help?</a>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="../about">About us</a>
+					</li>
+
+					<li>
+						<a href="../contact">Contact us</a>
+					</li>
+
+					<li class="move-right">
+						<a class="nav-button btn" href="/donate">Donate</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="progress-container">
+				<div class="progress-bar" id="myBar"></div>
+			</div>
+		</header>
+
+		<div class="page-header">
+			<div class="page-header-text">
+				<h1>How else can I help?</h1>
+			</div>
+		</div>
+
+		<div class="wrapper section show-on-scroll is-visible">
+			<div class="karen-crisis-overview">
+				<div class="box2"></div>
+				<div class="section-row">
+					<div class="section-info">
+						<div class="section-header">
+							<h2>Learn more about the crisis</h2>
+						</div>
+						<div class="section-img-small-inline">
+							<img src="static/resources/img/casey.jpeg" />
+						</div>
+						<div class="section-desc">
+							<p>
+								Below is a list of links to various resources containing
+								information on the crisis the Karen people are facing.
+							</p>
+							<p>
+								<a
+									href="https://www.burmalink.org/background/thailand-burma-border/displaced-in-thailand/refugee-camps/"
+									>Burma Link's coverage on Refugee Camps</a
+								>
+							</p>
+							<p>
+								<a
+									href="https://edition.cnn.com/2008/WORLD/asiapcf/05/27/thai.karen/"
+									>CNN's coverage on Karen Refugees</a
+								>
+							</p>
+							<p>
+								<a
+									href="https://www.unhcr.org/uk/news/stories/2019/7/5d3822dc4/decades-thailand-myanmar-refugees-head-home.html"
+									>The UN Refugee Agency's article on Myanmar Refugees</a
+								>
+							</p>
+							<p>
+								<a href="https://ethnomed.org/culture/karen/"
+									>Ethnomed's coverage on the Karen people</a
+								>
+							</p>
+							<p>
+								<a
+									href="https://humanity-inclusion.org.uk/en/news/mae-la-refugee-camp-in-thailand-a-difficult-place-to-be-a-child"
+									>Humanity Inclusion's coverage on the Mae La refugee camp in
+									Thailand</a
+								>
+							</p>
+						</div>
+					</div>
+					<div class="section-img">
+						<img src="static/resources/img/casey.jpeg" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper section show-on-scroll is-visible">
+			<div class="karen-crisis-isolated">
+				<div class="box1"></div>
+				<div class="section-row">
+					<div class="section-img">
+						<img src="static/resources/img/play.jpg" />
+					</div>
+					<div class="section-info">
+						<div class="section-header">
+							<h2>Other Charities & Fundraisers for the Karen People</h2>
+						</div>
+						<div class="section-img-small-inline">
+							<img src="static/resources/img/play.jpg" />
+						</div>
+						<div class="section-desc">
+							<p>
+								Here is a list of other charities that share our vision for a
+								better future for the Karen people. Please consider donating.
+							</p>
+							<p>
+								<a href="https://donate.humanity-inclusion.org.uk/"
+									>Humanity Inclusion</a
+								>
+							</p>
+							<p>
+								<a
+									href="https://www.gofundme.com/f/buremese-karen-refugees-fundraiser"
+									>Simeon Casey's Fundraiser for Burmese Karen Refugees</a
+								>
+							</p>
+							<p>
+								<a href="https://www.justgiving.com/fundraising/karen-refugees"
+									>Brian Houston's Fundraiser for Karen Refugees</a
+								>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="footer-container">
+				<div class="footer-wrapper">
+					<div class="footer-inner">
+						<div class="footer-1">
+							<img src="static/resources/img/logo-white.svg" />
+							<p>
+								Karing Frontiers is a registered charity in Hong Kong 0061237.
+							</p>
+							<p>
+								<a
+									class="mail-footer"
+									target="_blank"
+									href="mailto:contact@karingfrontiers.com?Subject=Enquiry"
+									><ion-icon name="mail-outline"></ion-icon>
+									contact@karingfrontiers.com</a
+								>
+							</p>
+						</div>
+						<div class="footer-2">
+							<div class="footer-cta">
+								<a class="footer-cta btn" href="#">Make a donation today</a>
+							</div>
+						</div>
+						<div class="footer-3">
+							<div class="connect-with-us">
+								<h2>Connect with us</h2>
+								<p>
+									Please feel free to get in touch with us through our various
+									social media channels.
+								</p>
+							</div>
+							<div class="footer-social-links">
+								<a href="#"
+									><ion-icon class="instagram" name="logo-instagram"></ion-icon
+								></a>
+								<a href="#"
+									><ion-icon class="facebook" name="logo-facebook"></ion-icon
+								></a>
+								<a href="#"
+									><ion-icon class="linkedin" name="logo-linkedin"></ion-icon
+								></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer-wrapper">
+					<p>
+						Site created for free with <ion-icon name="heart"></ion-icon> by
+						Jude Cornish &copy
+						<script>
+							document.write(new Date().getFullYear());
+						</script>
+						-
+						<a href="https://judecornish.co.uk/" target="_blank"
+							>judecornish.co.uk</a
+						>
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://unpkg.com/ionicons@5.1.0/dist/ionicons.js"></script>
+		<script
+			type="text/javascript"
+			src="static/resources/vendors/slick/slick.min.js"
+		></script>
+		<script src="static/app.js"></script>
+	</body>
+</html>

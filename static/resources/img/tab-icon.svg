@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250">
+  <g id="Group_26" data-name="Group 26" transform="translate(-606 -626)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="125" cy="125" r="125" transform="translate(606 626)" fill="#bf0000"/>
+    <path id="heart-outline" d="M160.533,80c-21.692,0-32.385,21.385-32.385,21.385S117.456,80,95.763,80c-17.629,0-31.59,14.749-31.77,32.348-.368,36.532,28.98,62.511,61.148,84.344a5.346,5.346,0,0,0,6.014,0c32.164-21.833,61.512-47.812,61.148-84.344C192.122,94.749,178.162,80,160.533,80Z" transform="translate(603.382 621.146)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

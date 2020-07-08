@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='simple-grid.css')}}"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='style.css')}}"
+		/>
+		<link rel="stylesheet" href="static/resources/vendors/slick/slick.css" />
+		<link
+			rel="stylesheet"
+			href="static/resources/vendors/slick/slick-theme.css"
+		/>
+		<link rel="icon" href="static/resources/img/tab-icon.png" />
+		<script src="static/resources/vendors/lottie.js"></script>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+		<title>Karing Frontiers</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="menu-icons">
+					<ion-icon class="menu-icon" name="menu-outline"></ion-icon>
+					<ion-icon class="close-icon" name="close-outline"></ion-icon>
+				</div>
+				<a href="/">
+					<div class="logo-container">
+						<img src="static/resources/img/icon.png" />
+					</div>
+				</a>
+				<ul class="nav-list">
+					<li>
+						<a class="_current_" href="/">Home</a>
+					</li>
+
+					<li>
+						<a href="#/"
+							>Learn more
+							<ion-icon
+								class="dropdown-icon"
+								name="caret-down-outline"
+							></ion-icon
+						></a>
+						<ul class="sub-menu">
+							<li>
+								<a href="../karenpeople"
+									>The Crisis faced by the Karen people</a
+								>
+							</li>
+							<li>
+								<a href="../mrmjc">Mae Ra Moe Junior College</a>
+							</li>
+							<li>
+								<a href="../otherhelp">What else can I do to help?</a>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="../about">About us</a>
+					</li>
+
+					<li>
+						<a href="../contact">Contact us</a>
+					</li>
+
+					<li class="move-right">
+						<a class="nav-button btn" href="/donate">Donate</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="landing">
+			<video
+				autoplay
+				loop
+				muted
+				src="static/resources/img/video-of-game.mp4"
+			></video>
+			<div class="landing-left">
+				<div class="landing-left-background"></div>
+				<div class="header-text">
+					<h1>Change the world today</h1>
+					<h3>Empowering the Karen Youth through their education</h3>
+					<div class="header-button">
+						<a class="btn" href="#">Support our cause</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper section show-on-scroll is-visible">
+			<div class="who-are-the-karen-people">
+				<div class="box1"></div>
+				<div class="section-row">
+					<div class="section-img">
+						<img src="static/resources/img/Karen Refugees in Mae La Camp.jpg" />
+					</div>
+					<div class="section-info">
+						<div class="section-header">
+							<h2>Who are the Karen people?</h2>
+						</div>
+						<div class="section-desc">
+							<p>
+								The Karen are one of the largest ethnic minority groups in
+								Burma, residing in the southeastern region.
+							</p>
+							<p>
+								Decades of persecution by the Burmese government upon the Karen
+								and other ethnic minority groups, eventually led to civil war
+								between the Burmese military and these indigenous peoples in
+								1948.
+							</p>
+							<p>
+								This is currently the world’s longest ongoing civil war.
+								Thousands of Karen have been forced to take refuge on the
+								Thai-Burmese border.
+							</p>
+							<p>About 500,000 people remain in the refugee camps today.</p>
+						</div>
+						<div class="learn-more">
+							<a class="learn-more-button" href="pages/karen-people.html"
+								>Learn more about the crisis faced by the Karen people</a
+							>
+						</div>
+					</div>
+					<div class="section-img-small">
+						<img src="static/resources/img/Karen Refugees in Mae La Camp.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper section show-on-scroll is-visible">
+			<div class="what-are-we-doing-to-help">
+				<div class="box2"></div>
+				<div class="section-row">
+					<div class="section-info">
+						<div class="section-header">
+							<h2>What are we doing to help?</h2>
+						</div>
+						<div class="section-desc">
+							<p>
+								We believe that education should be a basic human right
+								therefore, we are sponsoring the Mae Ra Moe Junior College
+								(post-secondary school in a refugee camp on the Thai-Burmese
+								border).
+							</p>
+							<p>
+								MRMJC has been supported by the Child’s Dream Foundation from
+								2008 to 2018 however, that support ended in 2019. This will have
+								a significant impact on the funding of the school that we hope
+								to mitigate.
+							</p>
+						</div>
+						<div class="learn-more">
+							<a class="learn-more-button" href="#">Learn more about MRMJC</a>
+						</div>
+					</div>
+					<div class="section-img">
+						<img src="static/resources/img/pic-of-class.png" />
+					</div>
+					<div class="section-img-small">
+						<img src="static/resources/img/pic-of-class.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper testimonial-section show-on-scroll is-visible">
+
+			<div class="testimonials">
+
+					<div class="testimonial-card">
+					<div class="testimonials-inner">
+						<div class="testimonial-img">
+							<img src="static/resources/img/Cross Peace.png" />
+						</div>
+						<div class="testimonial-info">
+							<div class="testimonial-info-inner">
+								<h4>Class of 2019</h4>
+								<h3>Meet Cross Peace</h3>
+								<p>
+									“The first step, I hope to use my education to work in any
+									organization to earn money for upholding my family. The second
+									step, I am going to distribute my knowledge to people who are
+									interested in studying by becoming a teacher.”
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="testimonial-card">
+					<div class="testimonials-inner">
+						<div class="testimonial-img">
+							<img src="static/resources/img/Tha Dah.png" />
+						</div>
+						<div class="testimonial-info">
+							<div class="testimonial-info-inner">
+								<h4>Class of 2020</h4>
+								<h3>Meet Tha Dah</h3>
+								<p>
+									“Education is the most powerful weapon to change the world. If
+									I get an education, I will help my Karen people. I hope I will
+									be a doctor or a nurse. Then, I can help my neighbours.”
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="testimonial-card">
+					<div class="testimonials-inner">
+						<div class="testimonial-img">
+							<img src="static/resources/img/Naw Vashti Thaw Day.png" />
+						</div>
+						<div class="testimonial-info">
+							<div class="testimonial-info-inner">
+								<h4>Class of 2021</h4>
+								<h3 class="vashti">Meet Naw Vashti Thaw Day</h3>
+								<p>
+									“Education is the most powerful weapon to change the world. If
+									I get an education, I will help my Karen people. I hope I will
+									be a doctor or a nurse. Then, I can help my neighbours.”
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper goal-section show-on-scroll is-visible">
+			<div class="our-goal">
+				<div class="box1"></div>
+				<div class="section-row">
+					<div class="section-img">
+						<img src="static/resources/img/pic-of-class2.png" />
+					</div>
+					<div class="section-info">
+						<div class="section-header">
+							<h2>Our goal</h2>
+						</div>
+						<div class="section-desc">
+							<p>
+								85,000 HKD or 10,966 USD
+							</p>
+							<p>
+								This gives 60 students access to education and supports 13 staff
+								members and supports our vision for a generation of
+								world-changing leaders.
+							</p>
+							<p>
+								100% of funds will go directly to the MRMJC.
+							</p>
+						</div>
+						<div class="learn-more">
+							<a class="learn-more-button" href="#"
+								>Learn more about our goal and successes</a
+							>
+						</div>
+					</div>
+					<div class="section-img-small">
+						<img src="static/resources/img/pic-of-class2.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper show-on-scroll is-visible">
+			<div class="animated-icons">
+				<div id="animated-book" class="animated-book">
+					<div class="animation-container">
+						<div id="animated-book-img" class="animated-book-img"></div>
+					</div>
+					<p>
+						<strong>$167 USD (or $1300HKD)</strong> is all it takes to sponsor
+						one student for a year
+					</p>
+				</div>
+				<div
+					id="animated-heart"
+					class="animated-heart show-on-scroll is-visible"
+				>
+					<div class="animation-container">
+						<div id="animated-heart-img" class="animated-heart-img"></div>
+					</div>
+					<p>
+						If everyone reading this donated just<strong> 1$ (USD)</strong> we
+						would reach our goal in one month
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper section show-on-scroll is-visible">
+			<div class="we-need-your-support">
+				<div class="box2"></div>
+				<div class="section-row">
+					<div class="section-info">
+						<div class="section-header">
+							<h2>We need your support</h2>
+						</div>
+
+						<div class="section-desc">
+							<p>
+								Donations of any value are greatly appreciated by us and by
+								MRMJC.
+							</p>
+							<p>
+								All transactions are handled securely through our Stripe payment
+								flow and can be refunded at any time.
+							</p>
+						</div>
+						<div class="final-cta">
+							<a class="btn" href="#">Make a donation today</a>
+						</div>
+					</div>
+					<div class="section-img">
+						<iframe
+							width="100%"
+							height="415"
+							src="https://www.youtube.com/embed/V__59rcgciw"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						></iframe>
+					</div>
+					<div class="section-img-small">
+						<iframe
+							width="100%"
+							height="215"
+							src="https://www.youtube.com/embed/V__59rcgciw"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper show-on-scroll is-visible">
+			<div class="progress-bars">
+				<div class="nineteen-bar">
+					<h2>2019</h2>
+					<p>
+						We want to say a massive thank you to everyone who donated during
+						the 2019-2020 academic year. Due to your generosity, we reached our
+						goal of $10,966 (USD).
+					</p>
+					<div class="progress-bar-container">
+						<div class="nineteen-progress-bar show-on-scroll is-visible"></div>
+					</div>
+
+					<div class="tallies">
+						<p class="minimum-tally">$0</p>
+						<p class="minimum-tally">Amount raised</p>
+						<p class="maximum-tally">$10,966</p>
+					</div>
+				</div>
+				<div class="twenty-bar">
+					<h2>2020</h2>
+					<p>
+						The new academic year has just begun and we need your support just
+						as much now as ever before. Please donate to support our wonderful
+						cause.
+					</p>
+					<div class="progress-bar-container">
+						<div class="twenty-progress-bar show-on-scroll is-visible"></div>
+					</div>
+
+					<div class="tallies">
+						<p class="minimum-tally">$0</p>
+						<p class="minimum-tally">Amount raised</p>
+						<p class="maximum-tally">$10,966</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="footer-container">
+				<div class="footer-wrapper">
+					<div class="footer-inner">
+						<div class="footer-1">
+							<img src="static/resources/img/logo-white.svg" />
+							<p>
+								Karing Frontiers is a registered charity in Hong Kong
+								0061237. 
+							</p>
+							<p><a class="mail-footer" target="_blank" href="mailto:contact@karingfrontiers.com?Subject=Enquiry"><ion-icon name="mail-outline"></ion-icon> contact@karingfrontiers.com</a></p>
+						</div>
+						<div class="footer-2">
+							<div class="footer-cta">
+								<a class="footer-cta btn" href="#">Make a donation today</a>
+							</div>
+							<!-- Badge Code - Do Not Change The Code --><div class="col-xs-12 mt20" id="bg"><div style="margin:0px auto;width:100px;text-align:left;display:flex;border-radius:5px"><p>Visits:</p><a href="http://visitorshitcounter.com" rel="nofollow noopener"  target="_blank" title="https://visitorshitcounter.com/"></a></span><span class="text" id="dupli_hit_counter"   style="margin: 2px 0px 0px 0px;padding:0px 0 0px 0;display:inline-block;color:rgb(255, 255, 255);width:100%;text-align:center;"></span></span><input type="hidden" id="site_val"   value="https://visitorshitcounter.com/counterDisplay?code=700046db82d45ba186a121312a42bf69&style=0017&pad=5&type=page&initCount=1"></div></div><script src="https://visitorshitcounter.com/js/badgess.js?v=1592058023"></script><!-- Badge Code End Here -->
+						</div>
+						<div class="footer-3">
+							<div class="connect-with-us">
+								<h2>Connect with us</h2>
+								<p>
+									Please feel free to get in touch with us through our various
+									social media channels.
+								</p>
+							</div>
+							<div class="footer-social-links">
+								<a href="#"
+									><ion-icon class="instagram" name="logo-instagram"></ion-icon
+								></a>
+								<a href="#"
+									><ion-icon class="facebook" name="logo-facebook"></ion-icon
+								></a>
+								<a href="#"
+									><ion-icon class="linkedin" name="logo-linkedin"></ion-icon
+								></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer-wrapper">
+					<p>
+						Site created for free with <ion-icon name="heart"></ion-icon> by
+						Jude Cornish &copy
+						<script>
+							document.write(new Date().getFullYear());
+						</script>
+						-
+						<a href="https://judecornish.co.uk/" target="_blank"
+							>judecornish.co.uk</a
+						>
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://unpkg.com/ionicons@5.1.0/dist/ionicons.js"></script>
+		<script
+			type="text/javascript"
+			src="static/resources/vendors/slick/slick.min.js"
+		></script>
+		<script src="static/app.js"></script>
+		<script>
+			var animation = bodymovin.loadAnimation({
+				container: document.getElementById("animated-book-img"), // Required
+				path: "../static/resources/img/books.json", // Required
+				renderer: "svg", // Required
+				loop: true, // Optional
+				autoplay: true, // Optional
+				name: "Hello World", // Name for future reference. Optional.
+			});
+
+			var animation = bodymovin.loadAnimation({
+				container: document.getElementById("animated-heart-img"), // Required
+				path: "../static/resources/img/heart2.json", // Required
+				renderer: "svg", // Required
+				loop: true, // Optional
+				autoplay: true, // Optional
+				name: "Hello World", // Name for future reference. Optional.
+			});
+		</script>
+	</body>
+</html>

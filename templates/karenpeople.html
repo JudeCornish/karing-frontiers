@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='simple-grid.css')}}"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='style.css')}}"
+		/>
+		<link rel="stylesheet" href="static/resources/vendors/slick/slick.css" />
+		<link
+			rel="stylesheet"
+			href="static/resources/vendors/slick/slick-theme.css"
+		/>
+		<link rel="icon" href="static/resources/img/tab-icon.png" />
+		<script src="static/resources/vendors/lottie.js"></script>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+		<title>Karing Frontiers</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="menu-icons">
+					<ion-icon class="menu-icon" name="menu-outline"></ion-icon>
+					<ion-icon class="close-icon" name="close-outline"></ion-icon>
+				</div>
+				<a href="/">
+					<div class="logo-container">
+						<img src="static/resources/img/icon.png" />
+					</div>
+				</a>
+				<ul class="nav-list">
+					<li>
+						<a href="/">Home</a>
+					</li>
+
+					<li>
+						<a class="_current_" href="#/"
+							>Learn more
+							<ion-icon
+								class="dropdown-icon"
+								name="caret-down-outline"
+							></ion-icon
+						></a>
+						<ul class="sub-menu">
+							<li>
+								<a class="_current_" href="../karenpeople"
+									>The Crisis faced by the Karen people</a
+								>
+							</li>
+							<li>
+								<a href="../mrmjc">Mae Ra Moe Junior College</a>
+							</li>
+							<li>
+								<a href="../otherhelp">What else can I do to help?</a>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="../about">About us</a>
+					</li>
+
+					<li>
+						<a href="../contact">Contact us</a>
+					</li>
+
+					<li class="move-right">
+						<a class="nav-button btn" href="/donate">Donate</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="progress-container">
+				<div class="progress-bar" id="myBar"></div>
+			</div>
+		</header>
+
+		<div class="page-header">
+			<div class="page-header-text">
+				<h1>The Crisis Karen people are facing</h1>
+				<p>Sources: Humanity Inclusion, Wikipedia & The Guardian</p>
+			</div>
+		</div>
+
+		<div class="wrapper section show-on-scroll is-visible">
+			<div class="karen-crisis-overview">
+				<div class="box2"></div>
+				<div class="section-row">
+					<div class="section-info">
+						<div class="section-header">
+							<h2>Overview</h2>
+						</div>
+						<div class="section-img-small-inline">
+							<img src="static/resources/img/karen-group.jpeg" />
+						</div>
+						<div class="section-desc">
+							<p>
+								Since 1984, Thailand has provided refuge to people fleeing
+								violence in Myanmar, and more recently to economic migrants. The
+								population in the Thai refugee camps, located along the
+								Myanmar-Thailand border, is now estimated at 111,000 people.
+								Some people were born in the camps and have never set foot
+								outside.
+							</p>
+							<p>
+								Most of the refugees in the nine camps are Karen people, an
+								umbrella term that refers to a heterogeneous ethnic group
+								without a shared language, culture or religion. Since the 1940s,
+								ongoing violent conflicts between Karen separatists and the
+								Burmese army have forced many families to move. Around 400,000
+								Karen people are homeless.
+							</p>
+							<p>
+								The living conditions in the camps are extremely poor. Drinking
+								water is collected from wells and streams, and in the past,
+								cases of cholera and malaria have occurred. Children suffer from
+								chronic malnutrition and respiratory infections.
+							</p>
+						</div>
+					</div>
+					<div class="section-img">
+						<img src="static/resources/img/karen-group.jpeg" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper section show-on-scroll is-visible">
+			<div class="karen-crisis-isolated">
+				<div class="box1"></div>
+				<div class="section-row">
+					<div class="section-img">
+						<img src="static/resources/img/camp2.jpg" />
+					</div>
+					<div class="section-info">
+						<div class="section-header">
+							<h2>Isolated and overcrowded</h2>
+						</div>
+						<div class="section-img-small-inline">
+							<img src="static/resources/img/camp2.jpg" />
+						</div>
+						<div class="section-desc">
+							<p>
+								Most of the camps are isolated in the mountains and therefore
+								hard to access. There’s no electricity grid and some camps have
+								no phone signal. Health care and education opportunities are
+								extremely limited. In the rainy season, flash floods can cause
+								damage to the infrastructure and even cause casualties.
+							</p>
+							<p>
+								Other camps, such us Mae La Camp, the largest refugee camp with
+								more than 40,000 refugees, are only an hour’s drive away from
+								Mae Sot, the nearest town. More health service providers and
+								schools are present, but the camps are overcrowded. The lack of
+								space between the temporary houses, composed of bamboo and wood,
+								has been the cause of many fires in the camp.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper section show-on-scroll is-visible">
+			<div class="karen-crisis-depression">
+				<div class="box2"></div>
+				<div class="section-row">
+					<div class="section-info">
+						<div class="section-header">
+							<h2>Depression and suicides</h2>
+						</div>
+						<div class="section-img-small-inline">
+							<img src="static/resources/img/family.jpg" />
+						</div>
+						<div class="section-desc">
+							<p>
+								The life of the refugees is quite restricted because they
+								usually cannot go out, and the Thai police might arrest them if
+								they do. So if adults want to earn some money, they have to do
+								it secretly outside the camps, without getting caught. Most of
+								the refugees don’t take that risk and stay inside the camp. They
+								rely heavily on the weekly food distributions and the
+								humanitarian assistance provided by international NGOs and
+								community-based organisations, which makes them feel dependant
+								and bored.
+							</p>
+							<p>
+								Depression and alcohol addiction are very common amongst adult
+								refugees, which puts their children at risk of neglect and
+								malnutrition. No fewer than half of the adults suffer from
+								mental health issues, which recently has lead to a rising number
+								of suicides.
+							</p>
+							<p>
+								This increase can partially be explained by rumours that
+								refugees will have to return to Myanmar. As the peace process
+								continues, both the Myanmar and the Thailand government, as well
+								as the UNHCR encourage voluntary repatriation. But Karen
+								refugees fear that the situation in their home country is not
+								yet safe. Moreover, the idea of a ‘home country’ is for many a
+								non-existent concept, since they were born in the camps. They
+								have never known another way of living than their life in the
+								camps. It’s the only reality they know.
+							</p>
+						</div>
+					</div>
+					<div class="section-img">
+						<img src="static/resources/img/family.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper section show-on-scroll is-visible">
+			<div class="karen-crisis-children">
+				<div class="box1"></div>
+				<div class="section-row">
+					<div class="section-img">
+						<img src="static/resources/img/karen-camp.jpg" />
+					</div>
+					<div class="section-info">
+						<div class="section-header">
+							<h2>Children, longing to be children</h2>
+						</div>
+						<div class="section-img-small-inline">
+							<img src="static/resources/img/karen-camp.jpg" />
+						</div>
+						<div class="section-desc">
+							<p>
+								Almost half of the population of the Mae La camp is under 18.
+								Most children are born in the camp; they don’t have birth
+								certificates and are stateless, which jeopardizes their future.
+							</p>
+							<p>
+								Besides difficult backgrounds, the poor living conditions, and
+								an uncertain future, children lack the possibilities to learn
+								and play.
+							</p>
+							<p>
+								We hope to help this situation, specifically through the funding
+								of the Mae Ra Moe Junior College (MRMJC).
+							</p>
+							<div class="learn-more">
+								<a class="learn-more-button" href="#">Learn more about MRMJC</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="footer-container">
+				<div class="footer-wrapper">
+					<div class="footer-inner">
+						<div class="footer-1">
+							<img src="static/resources/img/logo-white.svg" />
+							<p>
+								Karing Frontiers is a registered charity in Hong Kong 0061237.
+							</p>
+							<p>
+								<a
+									class="mail-footer"
+									target="_blank"
+									href="mailto:contact@karingfrontiers.com?Subject=Enquiry"
+									><ion-icon name="mail-outline"></ion-icon>
+									contact@karingfrontiers.com</a
+								>
+							</p>
+						</div>
+						<div class="footer-2">
+							<div class="footer-cta">
+								<a class="footer-cta btn" href="#">Make a donation today</a>
+							</div>
+						</div>
+						<div class="footer-3">
+							<div class="connect-with-us">
+								<h2>Connect with us</h2>
+								<p>
+									Please feel free to get in touch with us through our various
+									social media channels.
+								</p>
+							</div>
+							<div class="footer-social-links">
+								<a href="#"
+									><ion-icon class="instagram" name="logo-instagram"></ion-icon
+								></a>
+								<a href="#"
+									><ion-icon class="facebook" name="logo-facebook"></ion-icon
+								></a>
+								<a href="#"
+									><ion-icon class="linkedin" name="logo-linkedin"></ion-icon
+								></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer-wrapper">
+					<p>
+						Site created for free with <ion-icon name="heart"></ion-icon> by
+						Jude Cornish &copy
+						<script>
+							document.write(new Date().getFullYear());
+						</script>
+						-
+						<a href="https://judecornish.co.uk/" target="_blank"
+							>judecornish.co.uk</a
+						>
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://unpkg.com/ionicons@5.1.0/dist/ionicons.js"></script>
+		<script
+			type="text/javascript"
+			src="static/resources/vendors/slick/slick.min.js"
+		></script>
+		<script src="static/app.js"></script>
+	</body>
+</html>

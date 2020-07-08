@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='simple-grid.css')}}"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='style.css')}}"
+		/>
+		<link rel="stylesheet" href="static/resources/vendors/slick/slick.css" />
+		<link
+			rel="stylesheet"
+			href="static/resources/vendors/slick/slick-theme.css"
+		/>
+		<link rel="icon" href="static/resources/img/tab-icon.png" />
+		<script src="static/resources/vendors/lottie.js"></script>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+		<title>Karing Frontiers</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="menu-icons">
+					<ion-icon class="menu-icon" name="menu-outline"></ion-icon>
+					<ion-icon class="close-icon" name="close-outline"></ion-icon>
+				</div>
+				<a href="/">
+					<div class="logo-container">
+						<img src="static/resources/img/icon.png" />
+					</div>
+				</a>
+				<ul class="nav-list">
+					<li>
+						<a href="/">Home</a>
+					</li>
+
+					<li>
+						<a href="#/"
+							>Learn more
+							<ion-icon
+								class="dropdown-icon"
+								name="caret-down-outline"
+							></ion-icon
+						></a>
+						<ul class="sub-menu">
+							<li>
+								<a href="../karenpeople"
+									>The Crisis faced by the Karen people</a
+								>
+							</li>
+							<li>
+								<a href="../mrmjc">Mae Ra Moe Junior College</a>
+							</li>
+							<li>
+								<a href="../otherhelp">What else can I do to help?</a>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						<a class="_current_" href="../about">About us</a>
+					</li>
+
+					<li>
+						<a href="../contact">Contact us</a>
+					</li>
+
+					<li class="move-right">
+						<a class="nav-button btn" href="/donate">Donate</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="page-header">
+			<h1>Meet our team</h1>
+		</div>
+
+			<section id="exec-member1" class="exec-member">
+				<div class="wrapper show-on-scroll is-visible">
+					<div class="exec-member-container">
+						<div class="exec-image">
+							<img src="static/resources/img/jude-formal.png" />
+						</div>
+						<div class="exec-info">
+							<div class="info-container">
+								<div class="exec-header">
+									<h3>[ Co-founder ]</h3>
+									<h2>Cosima Lesca</h2>
+								</div>
+									<p>A little bio about you and why you care about Karing Frontiers.</p>
+									<div class="exec-socials">
+										<ul>
+											<li><a href="https://www.instagram.com/cosima.lesca/" target="_blank"><ion-icon  name="logo-instagram"></ion-icon></li></a>
+										</ul>
+									</div>
+								</div>
+								<div class="info-container-inner">
+									<span></span>
+									<h2>What is my role?</h2>
+									<p>Description of what you do.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+			</section>
+
+			<section id="exec-member2" class="exec-member">
+				<div class="wrapper show-on-scroll is-visible">
+					<div class="exec-member-container">
+						<div class="exec-image">
+							<img src="static/resources/img/angelica.jpg" />
+						</div>
+						<div class="exec-info">
+							<div class="info-container">
+								<div class="exec-header">
+									<h3>[ Co-founder ]</h3>
+									<h2>Angelica Cheng</h2>
+								</div>
+									<p>In 2018, I had a rare opportunity to visit an invisible and marginalized community: the Mae Ra Moe refugee camp. During my week there, I had a special chance to visit the Mae Ra Moe Junior College (MRMJC), where I heard dozens of these students’ dreams and aspirations. So many of them talked about wanting to make a difference. And I began to understand that for so many of them, this was their drive to keep on living, despite all the uncertainty and fear. But then I learned how the MRMJC was not going to be able to run that following year since their funding was about to run out. When I returned back home from this trip, I was unable to sit with the fact that the futures of 70 of the MRMJC students were in jeopardy. I wanted the Karen people to be seen. So I started talking as much as I could about the people I’ve met, the stories I’ve heard, and this urgent need to take action. Two amazing AMAZING friends of mine stepped up. And our restless energy for change manifested into the beginnings of Karing Frontiers. Since then, we’ve supported the school for two academic years, and we’re excited to continue empowering Karen youth through building access to education!
+									</p>
+									<div class="exec-socials">
+										<ul>
+											<li><a href="https://www.instagram.com/judecornishmedia/" target="_blank"><ion-icon  name="logo-instagram"></ion-icon></li></a>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="exec-member1" class="exec-member">
+				<div class="wrapper show-on-scroll is-visible">
+					<div class="exec-member-container">
+						<div class="exec-image">
+							<img src="static/resources/img/jude-formal.png" />
+						</div>
+						<div class="exec-info">
+							<div class="info-container">
+								<div class="exec-header">
+									<h3>[ Co-founder ]</h3>
+									<h2>Ekisha Basu</h2>
+								</div>
+									<p>A little bio about you and why you care about Karing Frontiers.</p>
+									<div class="exec-socials">
+										<ul>
+											<li><a href="https://www.instagram.com/judecornishmedia/" target="_blank"><ion-icon  name="logo-instagram"></ion-icon></li></a>
+										</ul>
+									</div>
+								</div>
+								<div class="info-container-inner">
+									<span></span>
+									<h2>What is my role?</h2>
+									<p>Description of what you do.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="exec-member2" class="exec-member">
+				<div class="wrapper show-on-scroll is-visible">
+					<div class="exec-member-container">
+						<div class="exec-image">
+							<video loop autoplay muted src="static/resources/img/running-vid.mp4">
+						</div>
+						<div class="exec-info">
+							<div class="info-container">
+								<div class="exec-header">
+									<h3>[ Web-developer ]</h3>
+									<h2>Jude Cornish</h2>
+								</div>
+									<p>
+										I found Karing Frontiers through my friend, a co-founder of the charity, Cosima. I was truly inspired and wanted to do whatever I could to help the cause alongside them. In the grand scheme of things, global charities raise considerably more than we do year on year. But its not about the grand scheme of things. The impact Karing Frontiers has on the 60 students at MRMJC is truly life-changing, not to mention the wider influence of those students as they grow and develop to grow their community further. I am very proud to be a part of that movement.
+									</p>
+									<div class="exec-socials">
+										<ul>
+											<li><a href="https://www.youtube.com/judaycs" target="_blank"><ion-icon  name="logo-youtube"></ion-icon></li></a>
+											<li><a href="https://www.instagram.com/judecornishmedia/" target="_blank"><ion-icon  name="logo-instagram"></ion-icon></li></a>
+											<li><a href="https://twitter.com/JudeCornish" target="_blank"><ion-icon  name="logo-twitter"></ion-icon></li></a>
+										</ul>
+									</div>
+								</div>
+								<div class="info-container-inner">
+									<span></span>
+									<h2>What is my role as a Web Developer?</h2>
+									<p>
+										To aid the cause, I have developed the site you are viewing from scratch for free. I wanted there to be a clear and secure platform for people to make donations and to tell the story of the Karen people and what Karing Frontiers are doing to help them. 
+									</p>
+									<p>A key feature of the site is a completely custom payment flow with Stripe integration. It uses variable amounts and server side session generation. I did all of this and even paid for the hosting and domain of the site out of my own pocket, I'm truly 100% behind the cause.</p>
+									<p>I am available for hire, please visit my website for more details: <a href="https://www.judecornish.co.uk" target="_blank">judecornish.co.uk</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>	
+
+		<footer>
+			<div class="footer-container">
+				<div class="footer-wrapper">
+					<div class="footer-inner">
+						<div class="footer-1">
+							<img src="static/resources/img/logo-white.svg" />
+							<p>
+								Karing Frontiers is a registered charity in Hong Kong
+								0061237. 
+							</p>
+							<p><a class="mail-footer" target="_blank" href="mailto:contact@karingfrontiers.com?Subject=Enquiry"><ion-icon name="mail-outline"></ion-icon> contact@karingfrontiers.com</a></p>
+						</div>
+						<div class="footer-2">
+							<div class="footer-cta">
+								<a class="footer-cta btn" href="#">Make a donation today</a>
+							</div>
+						</div>
+						<div class="footer-3">
+							<div class="connect-with-us">
+								<h2>Connect with us</h2>
+								<p>
+									Please feel free to get in touch with us through our various
+									social media channels.
+								</p>
+							</div>
+							<div class="footer-social-links">
+								<a href="#"
+									><ion-icon class="instagram" name="logo-instagram"></ion-icon
+								></a>
+								<a href="#"
+									><ion-icon class="facebook" name="logo-facebook"></ion-icon
+								></a>
+								<a href="#"
+									><ion-icon class="linkedin" name="logo-linkedin"></ion-icon
+								></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer-wrapper">
+					<p>
+						Site created for free with <ion-icon name="heart"></ion-icon> by
+						Jude Cornish &copy
+						<script>
+							document.write(new Date().getFullYear());
+						</script>
+						-
+						<a href="https://judecornish.co.uk/" target="_blank"
+							>judecornish.co.uk</a
+						>
+					</p>
+				</div>
+			</div>
+		</footer>
+		
+
+		<script src="https://unpkg.com/ionicons@5.1.0/dist/ionicons.js"></script>
+		<script
+			type="text/javascript"
+			src="../resources/vendors/slick/slick.min.js"
+		></script>
+		<script src="static/app.js"></script>
+	</body>
+</html>
